@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Kseno.vcxproj" Id="a7d242ee-1baf-4633-9e93-4d0c10edd6d8" />
+</Solution>

@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>18.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{a7d242ee-1baf-4633-9e93-4d0c10edd6d8}</ProjectGuid>
+    <RootNamespace>Kseno</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)output\build\</OutDir>
+    <IntDir>$(SolutionDir)output\artif\</IntDir>
+    <IncludePath>C:\Users\User\Desktop\Kseno\src\Internals\LuaU;vendor;src;$(IncludePath)</IncludePath>
+    <AllProjectIncludesArePublic>false</AllProjectIncludesArePublic>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)output\build\</OutDir>
+    <IntDir>$(SolutionDir)output\artif\</IntDir>
+    <IncludePath>C:\Users\User\Desktop\Kseno\src\Internals\LuaU;vendor;src;$(IncludePath)</IncludePath>
+    <AllProjectIncludesArePublic>false</AllProjectIncludesArePublic>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <VcpkgUseStatic>false</VcpkgUseStatic>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <VcpkgUseStatic>false</VcpkgUseStatic>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Internals\LuaU\Allocator.cpp" />
+    <ClCompile Include="src\Internals\LuaU\Ast.cpp" />
+    <ClCompile Include="src\Internals\LuaU\BuiltinFolding.cpp" />
+    <ClCompile Include="src\Internals\LuaU\Builtins.cpp" />
+    <ClCompile Include="src\Internals\LuaU\BytecodeBuilder.cpp" />
+    <ClCompile Include="src\Internals\LuaU\Compiler.cpp" />
+    <ClCompile Include="src\Internals\LuaU\Confusables.cpp" />
+    <ClCompile Include="src\Internals\LuaU\ConstantFolding.cpp" />
+    <ClCompile Include="src\Internals\LuaU\CostModel.cpp" />
+    <ClCompile Include="src\Internals\LuaU\Cst.cpp" />
+    <ClCompile Include="src\Internals\LuaU\lcode.cpp" />
+    <ClCompile Include="src\Internals\LuaU\Lexer.cpp" />
+    <ClCompile Include="src\Internals\LuaU\Location.cpp" />
+    <ClCompile Include="src\Internals\LuaU\Parser.cpp" />
+    <ClCompile Include="src\Internals\LuaU\PrettyPrinter.cpp" />
+    <ClCompile Include="src\Internals\LuaU\StringUtils.cpp" />
+    <ClCompile Include="src\Internals\LuaU\TableShape.cpp" />
+    <ClCompile Include="src\Internals\LuaU\TimeTrace.cpp" />
+    <ClCompile Include="src\Internals\LuaU\Types.cpp" />
+    <ClCompile Include="src\Internals\LuaU\ValueTracking.cpp" />
+    <MASM Include="src\Internals\Memory\luck.asm">
+      <FileType>Document</FileType>
+    </MASM>
+    <ClCompile Include="src\Internals\Memory\memory.h" />
+    <ClCompile Include="src\Internals\Memory\memory.cpp" />
+    <ClCompile Include="src\Roblox.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Roblox.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Internals\Bytecode\Bytecode.hpp" />
+    <ClInclude Include="src\Internals\Bytecode\Offsets.h" />
+    <ClInclude Include="src\Internals\LuaU\BuiltinFolding.h" />
+    <ClInclude Include="src\Internals\LuaU\Builtins.h" />
+    <ClInclude Include="src\Internals\LuaU\ConstantFolding.h" />
+    <ClInclude Include="src\Internals\LuaU\CostModel.h" />
+    <ClInclude Include="src\Internals\LuaU\luacode.h" />
+    <ClInclude Include="src\Internals\LuaU\LuaU\Allocator.h" />
+    <ClInclude Include="src\Internals\LuaU\LuaU\Ast.h" />
+    <ClInclude Include="src\Internals\LuaU\LuaU\BuiltinFolding.h" />
+    <ClInclude Include="src\Internals\LuaU\LuaU\Builtins.h" />
+    <ClInclude Include="src\Internals\LuaU\LuaU\Bytecode.h" />
+    <ClInclude Include="src\Internals\LuaU\LuaU\BytecodeBuilder.h" />
+    <ClInclude Include="src\Internals\LuaU\LuaU\BytecodeUtils.h" />
+    <ClInclude Include="src\Internals\LuaU\LuaU\Common.h" />
+    <ClInclude Include="src\Internals\LuaU\LuaU\Compiler.h" />
+    <ClInclude Include="src\Internals\LuaU\LuaU\Confusables.h" />
+    <ClInclude Include="src\Internals\LuaU\LuaU\ConstantFolding.h" />
+    <ClInclude Include="src\Internals\LuaU\LuaU\Cst.h" />
+    <ClInclude Include="src\Internals\LuaU\LuaU\DenseHash.h" />
+    <ClInclude Include="src\Internals\LuaU\LuaU\ExperimentalFlags.h" />
+    <ClInclude Include="src\Internals\LuaU\LuaU\HashUtil.h" />
+    <ClInclude Include="src\Internals\LuaU\LuaU\Lexer.h" />
+    <ClInclude Include="src\Internals\LuaU\LuaU\Location.h" />
+    <ClInclude Include="src\Internals\LuaU\LuaU\luacode.h" />
+    <ClInclude Include="src\Internals\LuaU\LuaU\ParseOptions.h" />
+    <ClInclude Include="src\Internals\LuaU\LuaU\Parser.h" />
+    <ClInclude Include="src\Internals\LuaU\LuaU\ParseResult.h" />
+    <ClInclude Include="src\Internals\LuaU\LuaU\PrettyPrinter.h" />
+    <ClInclude Include="src\Internals\LuaU\LuaU\ScopedSeenSet.h" />
+    <ClInclude Include="src\Internals\LuaU\LuaU\StringUtils.h" />
+    <ClInclude Include="src\Internals\LuaU\LuaU\TableShape.h" />
+    <ClInclude Include="src\Internals\LuaU\LuaU\TimeTrace.h" />
+    <ClInclude Include="src\Internals\LuaU\LuaU\Types.h" />
+    <ClInclude Include="src\Internals\LuaU\LuaU\Utils.h" />
+    <ClInclude Include="src\Internals\LuaU\LuaU\ValueTracking.h" />
+    <ClInclude Include="src\Internals\LuaU\LuaU\Variant.h" />
+    <ClInclude Include="src\Internals\LuaU\LuaU\VecDeque.h" />
+    <ClInclude Include="src\Internals\LuaU\TableShape.h" />
+    <ClInclude Include="src\Internals\LuaU\Types.h" />
+    <ClInclude Include="src\Internals\LuaU\Utils.h" />
+    <ClInclude Include="src\Internals\LuaU\ValueTracking.h" />
+    <ClInclude Include="src\Internals\Roblox\Offsets.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>
