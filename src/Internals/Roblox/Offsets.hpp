@@ -5,7 +5,7 @@ namespace Offsets
 {
 	namespace VisualEngine
 	{
-		inline constexpr uintptr_t Pointer = 0x775E8D0;
+		inline constexpr uintptr_t Pointer = 0x79449e0;
 		inline constexpr uintptr_t ToFakeDataModel = 0x700;
 		inline constexpr uintptr_t ToRealDataModel = 0x1C0;
 	}
@@ -31,7 +31,7 @@ namespace Offsets
 	
 	namespace ScriptContext
 	{
-		inline constexpr uintptr_t RequireBypass = 0x8f8;
+		inline constexpr uintptr_t RequireBypass = 0x969;
 	}
 
 	namespace ByteCode
@@ -39,4 +39,5 @@ namespace Offsets
 		inline constexpr uintptr_t Pointer = 0x10;
 		inline constexpr uintptr_t Size = 0x20;
 	}
+
 }
